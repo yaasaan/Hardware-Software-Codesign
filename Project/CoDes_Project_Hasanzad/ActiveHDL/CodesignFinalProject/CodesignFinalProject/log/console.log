@@ -1,0 +1,2716 @@
+# Design: Design CodesignFinalProject already active.
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: Flow Manager: Not Defined
+acom -reorder -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/main.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Top-level unit(s) detected:
+# Entity => main
+# Warning: ELAB1_0026: main.vhd : (113, 0): There is no default binding for component "ALU". (No entity named "ALU" was found).
+# Warning: ELAB1_0026: main.vhd : (114, 0): There is no default binding for component "mainRegisters". (No entity named "mainRegisters" was found).
+# Warning: ELAB1_0026: main.vhd : (115, 0): There is no default binding for component "IR_PC". (No entity named "IR_PC" was found).
+# Warning: ELAB1_0026: main.vhd : (116, 0): There is no default binding for component "MUX". (No entity named "MUX" was found).
+# Warning: ELAB1_0026: main.vhd : (117, 0): There is no default binding for component "ControlUnit". (No entity named "ControlUnit" was found).
+# Warning: ELAB1_0026: main.vhd : (118, 0): There is no default binding for component "ROM". (No entity named "ROM" was found).
+# Compile success 0 Errors 6 Warnings  Analysis time :  63.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.2 [s].
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ROM.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.vhd
+# Compile Entity "ROM"
+# Compile Architecture "ROM" of Entity "ROM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/MUX.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/MUX.vhd
+# Compile Entity "MUX"
+# Compile Architecture "MUX" of Entity "MUX"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/IR_PC.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/IR_PC.vhd
+# Compile Entity "IR_PC"
+# Compile Architecture "IR_PC" of Entity "IR_PC"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ControlUnit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ControlUnit.vhd
+# Compile Entity "ControlUnit"
+# Compile Architecture "ControlUnit" of Entity "ControlUnit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ALU.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ALU.vhd
+# Compile Entity "ALU"
+# Compile Architecture "ALU" of Entity "ALU"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/mainRegisters.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/mainRegisters.vhd
+# Compile Entity "mainregisters"
+# Compile Architecture "mainregisters" of Entity "mainregisters"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:08 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+endsim
+# KERNEL: stopped at time: 2732535895 ns
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:10 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100 ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+testbench_for_main testbench_for_main
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:11 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 500ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 500 ns
+endsim
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:12 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 100 ps
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:12 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:12 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 500 ns
+run 500ns
+# KERNEL: stopped at time: 1 us
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:12 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 500ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 500 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:18 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:20 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 500ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 500 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# Error: DO_001 in file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\TestBench\main_TB_runtest.do line 4
+# Error: Cannot run E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\TestBench\main_TB_runtest.do
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ROM.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.vhd
+# Compile Entity "ROM"
+# Compile Architecture "ROM" of Entity "ROM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:33 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 500ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 500 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:33 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 1 us
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/main_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:35 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 1us
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 1 us
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:36 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 2us
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 2 us
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ROM.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.vhd
+# Compile Entity "ROM"
+# Compile Architecture "ROM" of Entity "ROM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:41 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+testbench_for_main testbench_for_main
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:41 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 1us
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 1 us
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/main_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:41 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 1us
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 1 us
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:54 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 1us
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__59.
+# KERNEL: stopped at time: 1 us
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ROM.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.vhd
+# Compile Entity "ROM"
+# Compile Architecture "ROM" of Entity "ROM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/main_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6623 kB (elbread=427 elab2=6055 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  11:56 AM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 1us
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__53.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__53.
+# KERNEL: stopped at time: 1 us
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ROM.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.vhd
+# Compile Entity "ROM"
+# Compile Architecture "ROM" of Entity "ROM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ControlUnit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ControlUnit.vhd
+# Compile Entity "ControlUnit"
+# Compile Architecture "ControlUnit" of Entity "ControlUnit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/mainregisters_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/mainregisters_TB.vhd
+# Compile Entity "mainregisters_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "mainregisters_tb"
+# Compile Configuration "TESTBENCH_FOR_mainregisters"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/alu_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/controlunit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/controlunit_TB.vhd
+# Compile Entity "controlunit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "controlunit_tb"
+# Compile Configuration "TESTBENCH_FOR_controlunit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/ir_pc_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/ir_pc_TB.vhd
+# Compile Entity "ir_pc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ir_pc_tb"
+# Compile Configuration "TESTBENCH_FOR_ir_pc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/mux_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/mux_TB.vhd
+# Compile Entity "mux_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "mux_tb"
+# Compile Configuration "TESTBENCH_FOR_mux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/rom_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/rom_TB.vhd
+# Compile Entity "rom_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "rom_tb"
+# Compile Configuration "TESTBENCH_FOR_rom"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\ALU.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ALU.vhd
+# Compile Entity "ALU"
+# Compile Architecture "ALU" of Entity "ALU"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\TestBench\alu_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_alu 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5434 kB (elbread=427 elab2=4868 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  12:13 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg input_1
+wave -noreg input_2
+wave -noreg cmd
+wave -noreg result
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\alu_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_alu 
+# 4 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/alu_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\ALU.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ALU.vhd
+# Compile Entity "ALU"
+# Compile Architecture "ALU" of Entity "ALU"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\TestBench\alu_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r TESTBENCH_FOR_alu 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5434 kB (elbread=427 elab2=4868 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  12:16 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg input_1
+wave -noreg input_2
+wave -noreg cmd
+wave -noreg result
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\alu_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_alu 
+# 4 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\IR_PC.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/IR_PC.vhd
+# Compile Entity "IR_PC"
+# Compile Architecture "IR_PC" of Entity "IR_PC"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\ir_pc_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/ir_pc_TB.vhd
+# Compile Entity "ir_pc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ir_pc_tb"
+# Compile Configuration "TESTBENCH_FOR_ir_pc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_ir_pc 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6428 kB (elbread=427 elab2=5861 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  12:28 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg RINPC
+wave -noreg RINIR
+wave -noreg CLK
+wave -noreg LDPC
+wave -noreg LDIR
+wave -noreg INCrement
+wave -noreg R_ST
+wave -noreg ROUTPC
+wave -noreg ROUTIR
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\ir_pc_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_ir_pc 
+# 9 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\mainRegisters.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/mainRegisters.vhd
+# Compile Entity "mainregisters"
+# Compile Architecture "mainregisters" of Entity "mainregisters"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\mainregisters_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/mainregisters_TB.vhd
+# Compile Entity "mainregisters_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "mainregisters_tb"
+# Compile Configuration "TESTBENCH_FOR_mainregisters"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_mainregisters 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6431 kB (elbread=427 elab2=5864 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  1:18 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg RIN0
+wave -noreg RIN1
+wave -noreg RIN2
+wave -noreg RIN3
+wave -noreg CLK
+wave -noreg LD0
+wave -noreg LD1
+wave -noreg LD2
+wave -noreg LD3
+wave -noreg ROUT0
+wave -noreg ROUT1
+wave -noreg ROUT2
+wave -noreg ROUT3
+wave -noreg ZR0
+wave -noreg ZR1
+wave -noreg ZR2
+wave -noreg ZR3
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\mainregisters_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_mainregisters 
+# 17 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__74.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\MUX.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/MUX.vhd
+# Compile Entity "MUX"
+# Compile Architecture "MUX" of Entity "MUX"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\mux_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/mux_TB.vhd
+# Compile Entity "mux_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "mux_tb"
+# Compile Configuration "TESTBENCH_FOR_mux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim +access +r TESTBENCH_FOR_mux 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5437 kB (elbread=427 elab2=4870 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  1:19 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg i0
+wave -noreg i1
+wave -noreg i2
+wave -noreg i3
+wave -noreg i4
+wave -noreg i5
+wave -noreg i6
+wave -noreg i7
+wave -noreg Mdata
+wave -noreg ALURes
+wave -noreg S0
+wave -noreg S1
+wave -noreg bus_sel
+wave -noreg mux_bus
+wave -noreg mux0
+wave -noreg mux1
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\mux_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_mux 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\ROM.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.vhd
+# Compile Entity "ROM"
+# Compile Architecture "ROM" of Entity "ROM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\rom_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/rom_TB.vhd
+# Compile Entity "rom_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "rom_tb"
+# Compile Configuration "TESTBENCH_FOR_rom"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r TESTBENCH_FOR_rom 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5565 kB (elbread=427 elab2=4999 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  1:48 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg Address
+wave -noreg Data
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\rom_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_rom 
+# 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /rom_tb/UUT,  Process: line__49.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\ControlUnit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ControlUnit.vhd
+# Compile Entity "ControlUnit"
+# Compile Architecture "ControlUnit" of Entity "ControlUnit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\controlunit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/controlunit_TB.vhd
+# Compile Entity "controlunit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "controlunit_tb"
+# Compile Configuration "TESTBENCH_FOR_controlunit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+asim +access +r TESTBENCH_FOR_controlunit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6440 kB (elbread=427 elab2=5874 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  1:55 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg clock
+wave -noreg rst
+wave -noreg ZR0
+wave -noreg ZR1
+wave -noreg ZR2
+wave -noreg ZR3
+wave -noreg ROUT_IR
+wave -noreg LD0
+wave -noreg LD1
+wave -noreg LD2
+wave -noreg LD3
+wave -noreg LD_PC
+wave -noreg LD_IR
+wave -noreg Sel0
+wave -noreg Sel1
+wave -noreg BusSelect
+wave -noreg ALU_CMD
+wave -noreg INC
+wave -noreg CLR
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\controlunit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_controlunit 
+# 19 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /controlunit_tb/UUT,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /controlunit_tb/UUT,  Process: line__59.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6623 kB (elbread=427 elab2=6055 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  2:43 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__49.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__49.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6623 kB (elbread=427 elab2=6055 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  2:44 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 200ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__49.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__49.
+# KERNEL: stopped at time: 200 ns
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/ROM.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.vhd
+# Compile Entity "ROM"
+# Compile Architecture "ROM" of Entity "ROM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work CodesignFinalProject -2002  $dsn/src/TestBench/rom_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/rom_TB.vhd
+# Compile Entity "rom_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "rom_tb"
+# Compile Configuration "TESTBENCH_FOR_rom"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  2:56 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 1ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__56.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__56.
+# KERNEL: stopped at time: 1 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\main.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/main.vhd
+# Compile Entity "main"
+# Compile Architecture "main" of Entity "main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\TestBench\main_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r TESTBENCH_FOR_main 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6625 kB (elbread=427 elab2=6058 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  2:56 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RESET_main
+wave -noreg BUS_Select
+wave -noreg INCREMENTPC
+wave -noreg CMD_final
+wave -noreg IR_final
+wave -noreg LD_final
+wave -noreg R_out0
+wave -noreg R_out1
+wave -noreg R_out2
+wave -noreg R_out3
+wave -noreg Select0
+wave -noreg Select1
+wave -noreg ALU_R
+wave -noreg busdata_out
+wave -noreg MemoryData
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\main_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_main 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 1us
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/mainregisters_map,  Process: line__74.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/ControlUnit_map,  Process: line__59.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /main_tb/UUT/rom_map,  Process: line__56.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rom_map,  Process: line__56.
+# KERNEL: stopped at time: 1 us
+# Waveform file 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/untitled.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\untitled.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\untitled.awc ... Done
+SetActiveLib -work
+comp -include "$dsn\src\mainRegisters.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/mainRegisters.vhd
+# Compile Entity "mainregisters"
+# Compile Architecture "mainregisters" of Entity "mainregisters"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\mainregisters_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/mainregisters_TB.vhd
+# Compile Entity "mainregisters_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "mainregisters_tb"
+# Compile Configuration "TESTBENCH_FOR_mainregisters"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_mainregisters 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6431 kB (elbread=427 elab2=5864 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:01 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg RIN0
+wave -noreg RIN1
+wave -noreg RIN2
+wave -noreg RIN3
+wave -noreg CLK
+wave -noreg LD0
+wave -noreg LD1
+wave -noreg LD2
+wave -noreg LD3
+wave -noreg ROUT0
+wave -noreg ROUT1
+wave -noreg ROUT2
+wave -noreg ROUT3
+wave -noreg ZR0
+wave -noreg ZR1
+wave -noreg ZR2
+wave -noreg ZR3
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\mainregisters_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_mainregisters 
+# 17 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__74.
+# KERNEL: stopped at time: 100 ns
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/mainregisters.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\mainregisters.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\mainregisters.awc ... Done
+SetActiveLib -work
+comp -include "$dsn\src\ALU.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ALU.vhd
+# Compile Entity "ALU"
+# Compile Architecture "ALU" of Entity "ALU"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\alu_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_alu 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5434 kB (elbread=427 elab2=4868 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:02 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg input_1
+wave -noreg input_2
+wave -noreg cmd
+wave -noreg result
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\alu_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_alu 
+# 4 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+# Waveform file 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/alu.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/alu.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\alu.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\alu.awc ... Done
+SetActiveLib -work
+comp -include "$dsn\src\ControlUnit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ControlUnit.vhd
+# Compile Entity "ControlUnit"
+# Compile Architecture "ControlUnit" of Entity "ControlUnit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\controlunit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/controlunit_TB.vhd
+# Compile Entity "controlunit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "controlunit_tb"
+# Compile Configuration "TESTBENCH_FOR_controlunit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_controlunit 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6440 kB (elbread=427 elab2=5874 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:02 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg clock
+wave -noreg rst
+wave -noreg ZR0
+wave -noreg ZR1
+wave -noreg ZR2
+wave -noreg ZR3
+wave -noreg ROUT_IR
+wave -noreg LD0
+wave -noreg LD1
+wave -noreg LD2
+wave -noreg LD3
+wave -noreg LD_PC
+wave -noreg LD_IR
+wave -noreg Sel0
+wave -noreg Sel1
+wave -noreg BusSelect
+wave -noreg ALU_CMD
+wave -noreg INC
+wave -noreg CLR
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\controlunit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_controlunit 
+# 19 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/controlUnit.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\controlUnit.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\controlUnit.awc ... Done
+run 100ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /controlunit_tb/UUT,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /controlunit_tb/UUT,  Process: line__59.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+testbench_for_controlunit testbench_for_controlunit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6440 kB (elbread=427 elab2=5874 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:02 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+run 100ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /controlunit_tb/UUT,  Process: line__53.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\mainRegisters.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/mainRegisters.vhd
+# Compile Entity "mainregisters"
+# Compile Architecture "mainregisters" of Entity "mainregisters"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\mainregisters_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/mainregisters_TB.vhd
+# Compile Entity "mainregisters_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "mainregisters_tb"
+# Compile Configuration "TESTBENCH_FOR_mainregisters"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_mainregisters 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6431 kB (elbread=427 elab2=5864 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:02 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg RIN0
+wave -noreg RIN1
+wave -noreg RIN2
+wave -noreg RIN3
+wave -noreg CLK
+wave -noreg LD0
+wave -noreg LD1
+wave -noreg LD2
+wave -noreg LD3
+wave -noreg ROUT0
+wave -noreg ROUT1
+wave -noreg ROUT2
+wave -noreg ROUT3
+wave -noreg ZR0
+wave -noreg ZR1
+wave -noreg ZR2
+wave -noreg ZR3
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\mainregisters_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_mainregisters 
+# 17 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__71.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__72.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__73.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /mainregisters_tb/UUT,  Process: line__74.
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\ALU.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ALU.vhd
+# Compile Entity "ALU"
+# Compile Architecture "ALU" of Entity "ALU"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\TestBench\alu_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r TESTBENCH_FOR_alu 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5434 kB (elbread=427 elab2=4868 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:03 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg input_1
+wave -noreg input_2
+wave -noreg cmd
+wave -noreg result
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\alu_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_alu 
+# 4 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: stopped at time: 100 ns
+# Waveform file 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/alu.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/alu.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\alu.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\alu.awc ... Done
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\ControlUnit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ControlUnit.vhd
+# Compile Entity "ControlUnit"
+# Compile Architecture "ControlUnit" of Entity "ControlUnit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\controlunit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/controlunit_TB.vhd
+# Compile Entity "controlunit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "controlunit_tb"
+# Compile Configuration "TESTBENCH_FOR_controlunit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_controlunit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6440 kB (elbread=427 elab2=5874 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:03 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg clock
+wave -noreg rst
+wave -noreg ZR0
+wave -noreg ZR1
+wave -noreg ZR2
+wave -noreg ZR3
+wave -noreg ROUT_IR
+wave -noreg LD0
+wave -noreg LD1
+wave -noreg LD2
+wave -noreg LD3
+wave -noreg LD_PC
+wave -noreg LD_IR
+wave -noreg Sel0
+wave -noreg Sel1
+wave -noreg BusSelect
+wave -noreg ALU_CMD
+wave -noreg INC
+wave -noreg CLR
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\controlunit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_controlunit 
+# 19 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /controlunit_tb/UUT,  Process: line__53.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /controlunit_tb/UUT,  Process: line__59.
+# KERNEL: stopped at time: 100 ns
+# Waveform file 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/controlUnit.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/controlUnit.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\controlUnit.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\controlUnit.awc ... Done
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\IR_PC.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/IR_PC.vhd
+# Compile Entity "IR_PC"
+# Compile Architecture "IR_PC" of Entity "IR_PC"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\ir_pc_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/ir_pc_TB.vhd
+# Compile Entity "ir_pc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ir_pc_tb"
+# Compile Configuration "TESTBENCH_FOR_ir_pc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_ir_pc 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6428 kB (elbread=427 elab2=5861 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:03 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg RINPC
+wave -noreg RINIR
+wave -noreg CLK
+wave -noreg LDPC
+wave -noreg LDIR
+wave -noreg INCrement
+wave -noreg R_ST
+wave -noreg ROUTPC
+wave -noreg ROUTIR
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\ir_pc_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_ir_pc 
+# 9 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: stopped at time: 100 ns
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/IR_PC.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\IR_PC.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\IR_PC.awc ... Done
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\MUX.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/MUX.vhd
+# Compile Entity "MUX"
+# Compile Architecture "MUX" of Entity "MUX"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\TestBench\mux_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/mux_TB.vhd
+# Compile Entity "mux_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "mux_tb"
+# Compile Configuration "TESTBENCH_FOR_mux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_mux 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5437 kB (elbread=427 elab2=4870 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:04 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg i0
+wave -noreg i1
+wave -noreg i2
+wave -noreg i3
+wave -noreg i4
+wave -noreg i5
+wave -noreg i6
+wave -noreg i7
+wave -noreg Mdata
+wave -noreg ALURes
+wave -noreg S0
+wave -noreg S1
+wave -noreg bus_sel
+wave -noreg mux_bus
+wave -noreg mux0
+wave -noreg mux1
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\mux_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_mux 
+# 16 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: stopped at time: 100 ns
+# Waveform file 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/MUX.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/MUX.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\MUX.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\MUX.awc ... Done
+endsim
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\ROM.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.vhd
+# Compile Entity "ROM"
+# Compile Architecture "ROM" of Entity "ROM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\TestBench\rom_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/TestBench/rom_TB.vhd
+# Compile Entity "rom_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "rom_tb"
+# Compile Configuration "TESTBENCH_FOR_rom"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim +access +r TESTBENCH_FOR_rom 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5567 kB (elbread=427 elab2=5001 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\wave.asdb
+#  3:04 PM, Wednesday, June 29, 2022
+#  Simulation has been initialized
+wave 
+wave -noreg Address
+wave -noreg Data
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\rom_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_rom 
+# 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/wave.asdb'.
+run 100ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /rom_tb/UUT,  Process: line__56.
+# KERNEL: stopped at time: 100 ns
+# Waveform file 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.awc' connected to 'E:/_Project/ActiveHDL/CodesignFinalProject/CodesignFinalProject/src/ROM.asdb'.
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\ROM.asdb ... Done
+# Adding file E:\_Project\ActiveHDL\CodesignFinalProject\CodesignFinalProject\src\ROM.awc ... Done
+endsim
+# VSIM: Simulation has finished.

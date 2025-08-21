@@ -1,0 +1,14 @@
+.\src\main.vhd
+.\src\mainRegisters.vhd
+.\src\ALU.vhd
+.\src\ControlUnit.vhd
+.\src\IR_PC.vhd
+.\src\MUX.vhd
+.\src\ROM.vhd
+.\src\TestBench\main_TB.vhd
+.\src\TestBench\mainregisters_TB.vhd
+.\src\TestBench\alu_TB.vhd
+.\src\TestBench\controlunit_TB.vhd
+.\src\TestBench\ir_pc_TB.vhd
+.\src\TestBench\mux_TB.vhd
+.\src\TestBench\rom_TB.vhd

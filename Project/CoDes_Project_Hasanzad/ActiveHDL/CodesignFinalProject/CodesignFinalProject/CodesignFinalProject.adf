@@ -1,0 +1,106 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=CodesignFinalProject
+
+[Library]
+CodesignFinalProject=.\CodesignFinalProject\CodesignFinalProject.lib
+
+[$LibMap$]
+CodesignFinalProject=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+
+[Groups]
+TestBench=1
+
+[Files]
+/main.vhd=-1
+/mainRegisters.vhd=-1
+/ALU.vhd=-1
+/ControlUnit.vhd=-1
+/IR_PC.vhd=-1
+/MUX.vhd=-1
+/ROM.vhd=-1
+/untitled.asdb=-1
+/untitled.awc=-1
+/mainregisters.asdb=-1
+/mainregisters.awc=-1
+/alu.asdb=-1
+/alu.awc=-1
+/controlUnit.asdb=-1
+/controlUnit.awc=-1
+/IR_PC.asdb=-1
+/IR_PC.awc=-1
+/MUX.asdb=-1
+/MUX.awc=-1
+/ROM.asdb=-1
+/ROM.awc=-1
+TestBench/main_TB.vhd=-1
+TestBench/main_TB_runtest.do=-1
+TestBench/mainregisters_TB.vhd=-1
+TestBench/mainregisters_TB_runtest.do=-1
+TestBench/alu_TB.vhd=-1
+TestBench/alu_TB_runtest.do=-1
+TestBench/controlunit_TB.vhd=-1
+TestBench/controlunit_TB_runtest.do=-1
+TestBench/ir_pc_TB.vhd=-1
+TestBench/ir_pc_TB_runtest.do=-1
+TestBench/mux_TB.vhd=-1
+TestBench/mux_TB_runtest.do=-1
+TestBench/rom_TB.vhd=-1
+TestBench/rom_TB_runtest.do=-1
+
+[Files.Data]
+.\src\main.vhd=VHDL Source Code
+.\src\mainRegisters.vhd=VHDL Source Code
+.\src\ALU.vhd=VHDL Source Code
+.\src\ControlUnit.vhd=VHDL Source Code
+.\src\IR_PC.vhd=VHDL Source Code
+.\src\MUX.vhd=VHDL Source Code
+.\src\ROM.vhd=VHDL Source Code
+.\src\untitled.asdb=Accelerated Waveform File
+.\src\untitled.awc=Accelerated Waveform Configuration
+.\src\mainregisters.asdb=Accelerated Waveform File
+.\src\mainregisters.awc=Accelerated Waveform Configuration
+.\src\alu.asdb=Accelerated Waveform File
+.\src\alu.awc=Accelerated Waveform Configuration
+.\src\controlUnit.asdb=Accelerated Waveform File
+.\src\controlUnit.awc=Accelerated Waveform Configuration
+.\src\IR_PC.asdb=Accelerated Waveform File
+.\src\IR_PC.awc=Accelerated Waveform Configuration
+.\src\MUX.asdb=Accelerated Waveform File
+.\src\MUX.awc=Accelerated Waveform Configuration
+.\src\ROM.asdb=Accelerated Waveform File
+.\src\ROM.awc=Accelerated Waveform Configuration
+.\src\TestBench\main_TB.vhd=VHDL Test Bench
+.\src\TestBench\main_TB_runtest.do=Macro
+.\src\TestBench\mainregisters_TB.vhd=VHDL Test Bench
+.\src\TestBench\mainregisters_TB_runtest.do=Macro
+.\src\TestBench\alu_TB.vhd=VHDL Test Bench
+.\src\TestBench\alu_TB_runtest.do=Macro
+.\src\TestBench\controlunit_TB.vhd=VHDL Test Bench
+.\src\TestBench\controlunit_TB_runtest.do=Macro
+.\src\TestBench\ir_pc_TB.vhd=VHDL Test Bench
+.\src\TestBench\ir_pc_TB_runtest.do=Macro
+.\src\TestBench\mux_TB.vhd=VHDL Test Bench
+.\src\TestBench\mux_TB_runtest.do=Macro
+.\src\TestBench\rom_TB.vhd=VHDL Test Bench
+.\src\TestBench\rom_TB_runtest.do=Macro
+
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=alu_tb|testbench_for_alu|1 controlunit_tb|testbench_for_controlunit|1 ir_pc_tb|testbench_for_ir_pc|1 main|main|0 main_tb|testbench_for_main|1 mainregisters_tb|testbench_for_mainregisters|1 mux_tb|testbench_for_mux|1 rom_tb|testbench_for_rom|1 
+ShowHide=ShowTopLevel
+Selected=

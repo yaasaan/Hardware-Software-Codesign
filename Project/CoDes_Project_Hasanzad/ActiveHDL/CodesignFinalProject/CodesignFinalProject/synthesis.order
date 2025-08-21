@@ -1,0 +1,14 @@
+i<>.\src\CodesignFinalProject.vhd
+i<>.\src\mainRegisters.vhd
+i<>.\src\ALU.vhd
+i<>.\src\ControlUnit.vhd
+i<>.\src\IR_PC.vhd
+i<>.\src\MUX.vhd
+i<>.\src\ROM.vhd
+i<>.\src\TestBench\main_TB.vhd
+i<>.\src\TestBench\mainregisters_TB.vhd
+i<>.\src\TestBench\alu_TB.vhd
+i<>.\src\TestBench\controlunit_TB.vhd
+i<>.\src\TestBench\ir_pc_TB.vhd
+i<>.\src\TestBench\mux_TB.vhd
+i<>.\src\TestBench\rom_TB.vhd
